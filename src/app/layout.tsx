@@ -12,10 +12,21 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
+const siteUrl = new URL("https://derechitos.org");
+const siteTitle = "Derechitos";
+const siteDescription = "Conozca sus derechos constitutionales garantizados.";
+
 export const metadata: Metadata = {
-  title: "Derechitos",
-  description: "Conozca sus derechos constitutionales garantizados.",
-  metadataBase: new URL("https://derechitos.org"),
+  title: siteTitle,
+  description: siteDescription,
+  metadataBase: siteUrl,
+  openGraph: {
+    title: siteTitle,
+    type: "website",
+    url: siteUrl,
+    description: siteDescription,
+    locale: "es_US",
+  },
 };
 
 export default function RootLayout({
