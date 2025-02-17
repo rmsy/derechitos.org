@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import Firebase from "@/components/firebase";
+import { appDescription, appName, appUrl } from "@/lib/common";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -13,19 +14,19 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
-const siteUrl = new URL("https://derechitos.org");
-const siteTitle = "Derechitos";
-const siteDescription = "Conozca sus derechos constitutionales garantizados.";
-
 export const metadata: Metadata = {
-  title: siteTitle,
-  description: siteDescription,
-  metadataBase: siteUrl,
+  title: appName,
+  description: appDescription,
+  metadataBase: appUrl,
+  appleWebApp: {
+    capable: true,
+    title: appName,
+  },
   openGraph: {
-    title: siteTitle,
+    title: appName,
     type: "website",
-    url: siteUrl,
-    description: siteDescription,
+    url: appUrl,
+    description: appDescription,
     locale: "es_US",
     // TODO: Add image
   },
