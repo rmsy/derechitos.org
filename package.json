@@ -5,7 +5,7 @@
   "scripts": {
     "dev": "next dev --turbopack",
     "build": "next build",
-    "start": "next start",
+    "serve": "next build && serve out",
     "lint": "next lint",
     "prepare": "husky"
   },
@@ -27,6 +27,7 @@
     "lint-staged": "^15.4.3",
     "postcss": "^8",
     "prettier": "3.5.1",
+    "serve": "^14.2.4",
     "tailwindcss": "^4.0.0",
     "typescript": "^5"
   },
