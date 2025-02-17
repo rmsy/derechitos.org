@@ -26,7 +26,9 @@ export const metadata: Metadata = {
     url: siteUrl,
     description: siteDescription,
     locale: "es_US",
+    // TODO: Add image
   },
+  manifest: "/manifest.json",
 };
 
 export default function RootLayout({
