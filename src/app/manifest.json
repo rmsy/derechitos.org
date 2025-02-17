@@ -19,5 +19,5 @@
       "purpose": "maskable"
     }
   ],
-  "display": "minimal-ui"
+  "display": "standalone"
 }
