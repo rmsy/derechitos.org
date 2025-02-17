@@ -15,6 +15,7 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "Derechitos",
   description: "Conozca sus derechos constitutionales garantizados.",
+  metadataBase: new URL("https://derechitos.org"),
 };
 
 export default function RootLayout({
