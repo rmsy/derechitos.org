@@ -1,12 +1,22 @@
 "use client";
 
 import initFirebase from "@/lib/firebase";
-import { useEffect } from "react";
+import { createContext, PropsWithChildren, useEffect, useState } from "react";
 
-export default function Firebase() {
+export const FirebaseContext = createContext(
+  {} as Partial<ReturnType<typeof initFirebase>>,
+);
+
+export default function Firebase({ children }: PropsWithChildren) {
+  const [state, setState] = useState({});
+
   useEffect(() => {
-    initFirebase();
+    setState(initFirebase());
   }, []);
 
-  return null;
+  return (
+    <FirebaseContext.Provider value={state}>
+      {children}
+    </FirebaseContext.Provider>
+  );
 }
