@@ -1,8 +1,10 @@
+import ShareFooter from "@/components/shareFooter";
+
 export default function Home() {
   return (
-    <div>
-      <main className="size-full">
-        <div className="p-10 sm:p-40 font-[family-name:var(--font-geist-mono)]">
+    <div className="h-screen w-screen">
+      <main>
+        <div className="p-10 sm:p-40 mb-20 font-[family-name:var(--font-geist-mono)]">
           <h2 className="text-2xl font-light mb-6">
             Usted tiene derechos constitutionales <em>garantizados</em>.
           </h2>
@@ -31,9 +33,7 @@ export default function Home() {
           </ol>
         </div>
       </main>
-      <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
-        {/* define footer */}
-      </footer>
+      <ShareFooter />
     </div>
   );
 }
